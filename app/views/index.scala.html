@@ -1,0 +1,105 @@
+@(myForm: Form[PartyWeights])
+
+@import helper._
+
+@main("Vektet valg") {
+
+    @helper.form(action = routes.Application.randomize()) {
+
+        <table>
+            <tr>
+                <td><img src="@routes.Assets.at("images/fremskrittspartiet-logo-42x42.png")"></td>
+                <td><span class="party">Fremskrittspartiet</span><input type="text" id="weights_0__party" name="weights[0].party" value="Fremskrittspartiet" style="display : none"></td>
+                <td><select id="weights_0__weight" name="weights[0].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/arbeiderpartiet-logo-42x42.png")"></td>
+                <td><span class="party">Det Norske Arbeiderparti</span><input type="text" id="weights_1__party" name="weights[1].party" value="Det Norske Arbeiderparti" style="display : none"></td>
+                <td><select id="weights_1__weight" name="weights[1].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/hoyre-logo-42x42.png")"></td>
+                <td><span class="party">Høyre</span><input type="text" id="weights_2__party" name="weights[2].party" value="Høyre" style="display : none"></td>
+                <td><select id="weights_2__weight" name="weights[2].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/miljoepartiet-de-groenne-logo-42x42.png")"></td>
+                <td><span class="party">Miljøpartiet De Grønne</span><input type="text" id="weights_3__party" name="weights[3].party" value="Miljøpartiet De Grønne" style="display : none"></td>
+                <td><select id="weights_3__weight" name="weights[3].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/sosialistisk-venstreparti-logo-42x42.png")"></td>
+                <td><span class="party">Sosialistisk Venstreparti</span><input type="text" id="weights_4__party" name="weights[4].party" value="Sosialistisk Venstreparti" style="display : none"></td>
+                <td><select id="weights_4__weight" name="weights[4].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/venstre-logo-42x42.png")"></td>
+                <td><span class="party">Venstre</span><input type="text" id="weights_5__party" name="weights[5].party" value="Venstre" style="display : none"></td>
+                <td><select id="weights_5__weight" name="weights[5].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/roedt-logo-42x42.png")"></td>
+                <td><span class="party">Rødt</span><input type="text" id="weights_6__party" name="weights[6].party" value="Rødt" style="display : none"></td>
+                <td><select id="weights_6__weight" name="weights[6].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/senterpartiet-logo-42x42.png")"></td>
+                <td><span class="party">Senterpartiet</span><input type="text" id="weights_7__party" name="weights[7].party" value="Senterpartiet" style="display : none"></td>
+                <td><select id="weights_7__weight" name="weights[7].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/kristelig-folkeparti-logo-42x42.png")"></td>
+                <td><span class="party">Kristelig Folkeparti</span><input type="text" id="weights_8__party" name="weights[8].party" value="Kristelig Folkeparti" style="display : none"></td>
+                <td><select id="weights_8__weight" name="weights[8].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/piratpartiet-logo-42x42.png")"></td>
+                <td><span class="party">Piratpartiet</span><input type="text" id="weights_9__party" name="weights[9].party" value="Piratpartiet" style="display : none"></td>
+                <td><select id="weights_9__weight" name="weights[9].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/norgespartiet-logo-42x42.png")"></td>
+                <td><span class="party">Norgespartiet</span><input type="text" id="weights_10__party" name="weights[10].party" value="Norgespartiet" style="display : none"></td>
+                <td><select id="weights_10__weight" name="weights[10].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/det-liberale-folkepartiet-logo-42x42.png")"></td>
+                <td><span class="party">Det Liberale Folkepartiet</span><input type="text" id="weights_11__party" name="weights[11].party" value="Det Liberale Folkepartiet" style="display : none"></td>
+                <td><select id="weights_11__weight" name="weights[11].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/de-kristne-logo-42x42.png")"></td>
+                <td><span class="party">De Kristne</span><input type="text" id="weights_12__party" name="weights[12].party" value="De Kristne" style="display : none"></td>
+                <td><select id="weights_12__weight" name="weights[12].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/folkemakten-logo-42x42.png")"></td>
+                <td><span class="party">Folkemakten</span><input type="text" id="weights_13__party" name="weights[13].party" value="Folkemakten" style="display : none"></td>
+                <td><select id="weights_13__weight" name="weights[13].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/pensjonistpartiet-logo-42x42.png")"></td>
+                <td><span class="party">PensjonistPartiet</span><input type="text" id="weights_14__party" name="weights[14].party" value="PensjonistPartiet" style="display : none"></td>
+                <td><select id="weights_14__weight" name="weights[14].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/norges-kommunistiske-parti-logo-42x42.png")"></td>
+                <td><span class="party">Norges Kommunistiske Parti</span><input type="text" id="weights_15__party" name="weights[15].party" value="Norges Kommunistiske Parti" style="display : none"></td>
+                <td><select id="weights_15__weight" name="weights[15].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+            <tr>
+                <td><img src="@routes.Assets.at("images/demokratene-i-norge-logo-42x42.png")"></td>
+                <td><span class="party">Demokratene i Norge</span><input type="text" id="weights_16__party" name="weights[16].party" value="Demokratene i Norge" style="display : none"></td>
+                <td><select id="weights_16__weight" name="weights[16].weight" ><option value="0" selected>0</option><option value="1" >1</option><option value="5" >5</option><option value="10" >10</option><option value="50" >50</option><option value="100" >100</option><option value="500" >500</option><option value="1000" >1000</option></select></td>
+            </tr>
+        </table>
+
+        <br/>
+
+        <div class="actions">
+            <input type="submit" class="btn btn-default" value="Trekk">
+        </div>
+
+    }
+
+}

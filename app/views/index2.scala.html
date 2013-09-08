@@ -1,0 +1,55 @@
+@(myForm: Form[PartyWeights])
+
+    @import helper._
+    @import helper.twitterBootstrap._
+
+    @informationGroup(field: Field) = {
+        <div>
+
+            @inputText(
+                field("party"),
+                '_label -> "",
+                'style -> "display: none"
+            )
+
+            @select(
+                field("weight"),
+                options = List(
+                    "0" -> "0",
+                    "1" -> "1",
+                    "5" -> "5",
+                    "10" -> "10",
+                    "50" -> "50",
+                    "100" -> "100",
+                    "500" -> "500",
+                    "1000" -> "1000"),
+                '_label -> ""
+            )
+
+        </div>
+    }
+
+    @main("Vektet valg") {
+
+        @helper.form(action = routes.Application.randomize()) {
+
+            <fieldset>
+                <div id="partyWeights">
+
+                @repeat(myForm("weights")) { information =>
+
+                    @informationGroup(information)
+
+                }
+
+                </div>
+
+            </fieldset>
+
+            <div class="actions">
+                <input type="submit" class="btn primary" value="Insert">
+            </div>
+
+        }
+
+    }
